@@ -1,0 +1,191 @@
+body {font-family:sans-serif; line-height:1.5; margin:1rem 2rem}
+h1,h2 {font-weight:100}
+h2 {margin-top:2rem}
+li {margin:.75rem 0}
+kbd,code{font-size:larger}
+
+
+
+/* FAQ container */
+
+.dl-faq {
+  position: relative;
+  max-width: 36rem;
+  margin: 1rem auto;
+}
+
+.dl-faq > dt {
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding: 1rem;
+
+  /* Fix for IE9 & 10 */
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+
+dt > button {
+  color: inherit;
+  background-color: inherit;
+}
+.dl-faq > dt:first-child .pab-btn,
+.dl-faq > dt:first-child {
+  border-top: 0;
+}
+
+.dl-faq.pab_container > dt {
+  /* added via JS */
+  padding: 0;
+}
+
+.dl-faq > dd {
+  max-width: 34rem;
+  margin: 0 auto;
+  font-weight:100;
+}
+
+.dl-faq > dd > div {
+  padding: 0 0 2rem;
+}
+
+.dl-faq div > p {
+  margin: 0 0 1rem;
+}
+
+.dl-faq div >:last-child {
+  margin: 0;
+}
+
+
+/* The acivating buttons added via JS */
+
+.pab-btn {
+  position: relative;
+  cursor: pointer;
+  transition: color .3s ease-in;
+
+  /* Using absolute positioning for SVG so reserve some space */
+  padding: 1rem 2.5rem 1rem .5rem;
+  border: 0 solid transparent;
+  border-top: 1px solid rgba(0,0,0,.75);
+
+  /* inherit doesn't work in IE */
+  font-size: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+.pab-btn:hover,
+.pab-btn:focus,
+.pab-btn:active {
+  color:#000;
+  background-color: rgba(0,0,0,.05);
+}
+
+.pab-btn:focus {
+  outline: 0 solid;
+}
+
+.pab-btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+
+/* Underline text on button hover (Tesco requirement) */
+
+.pab-btn > span {
+  position: relative;
+  /* Removes button drepression in IE */
+  pointer-events: none;
+  /* Required by Safari */
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s;
+}
+
+.pab-btn:hover > span,
+.pab-btn:focus > span {
+  border-bottom-color: rgba(0,0,0,.125);
+}
+
+.pab-btn:active > span {
+  border-bottom-color: transparent;
+}
+
+
+/* SVG plus */
+
+.pab-svg-plus {
+  /* Tesco requirement
+  border: 2px solid currentColor; */
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: calc(50% - .75em);
+  right: 4px;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  pointer-events: none;
+  stroke-width: 4;
+  stroke-linecap: square;
+  stroke: currentColor;
+  -webkit-transition: transform .7s ease-out, box-shadow .3s ease-out;
+  transition: transform .7s ease-out, box-shadow .3s ease-out;
+}
+
+.pab-btn:hover .pab-svg-plus,
+.pab-btn:focus .pab-svg-plus {
+  /* Same colour as text but with .4 alpha */
+  /* Tesco requirement
+  box-shadow: 0 0 0 4px rgba(0, 83, 159, 0.4);*/
+}
+
+.pab-btn:active .pab-svg-plus {
+  /* Tesco requirement
+  box-shadow: 0 0 0 4px rgba(0, 83, 159, 0);*/
+}
+
+[aria-expanded="true"] > .pab-svg-plus {
+  transform: rotateZ(360deg);
+}
+
+.use-plus {
+  /* used to animate plus into minus */
+  -webkit-transition: stroke .5s ease-out, opacity .7s ease-out;
+  transition: stroke .5s ease-out, opacity .7s ease-out;
+}
+
+[aria-expanded=true] .use-plus {
+  opacity: 0;
+}
+
+.isSafari .pab-btn .pab-svg-plus {
+  box-shadow: none;
+}
+
+
+/* Open / close animation - The inaccurate CSS max-height is resolved via JS adding an inline style */
+
+[data-pab] + [aria-hidden] {
+  overflow: hidden;
+  opacity: 1;
+  max-height: 50rem;
+  visibility: visible;
+  transition: visibility 0s ease 0s, max-height .65s ease-out 0s, opacity .65s ease-in 0s;
+}
+
+[data-pab] + [aria-hidden="true"] {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: .66s, 0s, 0s;
+}
+
+
+/* Overide the max-height set as an inline style by the JS */
+
+[data-pab] + [style][aria-hidden="true"] {
+  max-height: 0 !important;
+}

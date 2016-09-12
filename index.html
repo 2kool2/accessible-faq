@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang=en-GB>
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>Semantic and accessible FAQ</title>
+  <link rel=stylesheet href=css/styles.css>
+</head>
+<body>
+
+
+<svg style="display:none">
+  <defs>
+
+    <symbol viewBox="0 0 38 38" id="icon-plus">
+      <title>Show</title>
+      <path class="icon-plus-v" d="M10.5 19l17 0"></path>
+      <path class="icon-plus-h" d="M19 10.5l0 17"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 38 38" id="icon-minus">
+      <title>Hide</title>
+      <path class="icon-plus-v" d="M10.5 19l17 0"></path>
+    </symbol>
+
+    <!-- vert and hori combined make up the plus icon and allow for animation -->
+    <symbol viewBox="0 0 38 38" id="icon-vert">
+      <path d="M19 10.5l0 17"></path>
+    </symbol>
+    <symbol viewBox="0 0 38 38" id="icon-hori">
+      <path d="M10.5 19l17 0"></path>
+    </symbol>
+
+  </defs>
+</svg>
+
+<main class=-modal>
+
+<h1>FAQ using <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles to meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA</h1>
+
+<dl class="dl-faq pab_container">
+
+  <dt data-pab=faq_1><span>Why do I have to pay for bags?</span></dt>
+
+  <dd id=faq_1>
+    <div>
+      <p>A recent change in law in England means we now have to charge 5p for all single-use carrier bags we issue in England, Scotland and Wales.</p>
+      <p>For information about the Government carrier bag charge in England please visit: <a href="">https://www.gov.uk/guidance/carrier-bag-charges-retailers-responsibilities</a></p>
+    </div>
+  </dd>
+
+
+  <dt id="open-onload" data-pab=faq_2><span>Open via URL fragment: Why should I reuse my own bag?</span></dt>
+
+  <dd id=faq_2>
+    <div>
+      <p>Add an id to the toggle then reference via the URL to scroll to the toggle and open the target section on page load.</p>
+      <p>Not only will you avoid the charge, you will also have a positive impact on the environment by reducing litter, protecting wildlife and saving resources used to make and distribute bags.</p>
+      <p>We have a range of re-useable bags available to buy in store.</p>
+      <p>Remember also that you can replace your Tesco Bag for Life for free in store if it's getting too worn.</p>
+    </div>
+  </dd>
+
+
+  <dt data-pab=faq_3><span>So where does that 5p go?</span></dt>
+
+  <dd id=faq_3>
+    <div>
+      <p>Proceeds generated from the charge, excluding VAT and reasonable costs, will be donated to local projects through our Bags of Help community grant scheme. We will be working Groundwork, an expert organisation, to help us do this.</p>
+      <p>In England, Scotland and Wales the proceeds generated from the sale of the bags will go to good causes, as set out by DEFRA (Department for Environment Food &amp; Rural Affairs).</p>
+      <p>In Northern Ireland the proceeds of the 5p levy are paid to the Department of the Environment (DOE). The money raised is used to deliver local projects to improve the environment.</p>
+    </div>
+  </dd>
+
+
+  <!-- adding data-pab-expand will force section open by default -->
+  <dt data-pab=faq_4 data-pab-expand><span>Open by default: How does this charge affect Tesco bags for life?</span></dt>
+
+  <dd id=faq_4>
+    <div>
+      <p>Adding "data-pab-expand" to the toggle will force the target section open by default.</p>
+      <p>Our ‘Bag for Life’ bags, which are made from 100% recycled materials, will be replaced free of charge when it wears out and we’ll even recycle your old bag.</p>
+      <p>Tesco Bags for Life can be replaced as often as necessary.</p>
+    </div>
+  </dd>
+
+
+  <dt data-pab=faq_5><span>Why are we removing green points?</span></dt>
+
+  <dd id=faq_5>
+    <div>
+      <p>We introduced Green points for those customers that chose to reuse bags to encourage and thank them for taking environmental responsibility. We are fully supporting the government in their approach to reducing carrier bag usage through charging,
+        that's why we are closing our voluntary scheme.</p>
+    </div>
+  </dd>
+
+</dl>
+
+<h2>How it works</h2>
+
+<p>Takes a <code>dl</code> list and wraps each of its <code>dt</code> content with a <code>button</code>. The <code>dt</code> is targeted by the <code>data-pab</code> attribute which has the value of the <code>id</code> of the <code>dd</code> to show or hide.</p>
+
+<p>Adding the attribute <code>data-pab-expand</code> to a <code>dt</code> will make a <code>dd</code> open by default.</p>
+
+<p>If a <code>dd</code> <code>id</code> value is referenced as a fragment identifier in the <abbr title="Uniform Reference Locator">URL</abbr>, then it is also opened by default.</p>
+
+<p>The code is very semantically written but has one caveat. It only allows a single <code>dd</code> per <code>dt</code> which is fine for an FAQ (but not for a dictionary).</p>
+
+
+<p class=smaller><a herf="http://codepen.io/2kool2">Pens by Mike Foskett</a> &mdash; <a href="https://websemantics.uk/">webSemantics</a></p>
+
+<p>Mike Foskett @ <a href="https://websemantics.uk/">webSemantics</a></p>
+
+</main>
+
+
+<!--
+<script src=js/accessible-faq.1.0.min.js></script>
+ -->
+<!-- -->
+<script src=js/accessible-faq.1.0.js></script>
+
+</body>
+</html>
