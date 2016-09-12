@@ -39,7 +39,7 @@ To expand an answer via URI fragment, reference the <code>dd</code> <code>id</co
     </div>
   </dd>
 
-  &hellip;
+  ...
 </dl>
 ```
 
