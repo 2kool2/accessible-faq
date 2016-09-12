@@ -21,9 +21,11 @@ Link to styles
 <link rel="stylesheet" href="css/styles.css">
 ```
 
-A definition list <code>dl</code> is used in the HTML.
-Definition title <code>dt</code> for the question, and definition data <code>dd</code> for the answer.
-Add the data attribute <code>data-pab</code> to the <code>dt</code> which has the value of the
+A definition list <code>dl</code> is used for the FAQ.<br>
+Definition title <code>dt</code> for the question, and definition data <code>dd</code> for the answer.<br>
+Add the data attribute <code>data-pab</code> to the <code>dt</code> with the id value of the <code>dd</code> it controls.<br>
+Add the data attribute <code>data-pab-expand</code> to a <code>dt</code> for it to be expanded by default.<br>
+
 ```html
 <dl class="dl-faq pab_container">
 
