@@ -26,9 +26,9 @@ var debounce = function(func, wait, immediate) {
 
 
 
-// peek-a-boo.7.2.js - Mike Foskett - https://websemantics.uk/articles/peek-a-boo-v7/
+// peek-a-boo.7.3.js - Mike Foskett - https://websemantics.uk/articles/peek-a-boo-v7/
 
-// Show - hide a block - adapted for FAQ
+// Show - hide a block - adapted for FAQ use
 // Requires:
 //    setAttribute / getAttribute (IE9+)
 //    classList (IE10+)  - disabled
@@ -41,6 +41,7 @@ var debounce = function(func, wait, immediate) {
 
 
 // FAQ version:
+// v7.3 Expanded when URI fragment matches the target ID
 // v7.2 HTML button reinstated, js adjusted.
 //      Initial open/close state reworked
 
@@ -257,8 +258,8 @@ var Pab = (function (window, document, debounce) {
       }, 500);
     }
 
-    // Check url fragment and if toggle ID matches, open it
-    if (toggle.parentElement.id && toggle.parentElement.id === fragmentId) {
+    // Check url fragment and if target ID matches, open it
+    if (target.id === fragmentId) {
       setTimeout(function () {
         _openCloseToggleTarget(toggle, target, false);
         toggle.focus();

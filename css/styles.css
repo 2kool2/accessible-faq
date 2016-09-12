@@ -43,18 +43,6 @@ dt > button {
   font-weight:100;
 }
 
-.dl-faq > dd > div {
-  padding: 0 0 2rem;
-}
-
-.dl-faq div > p {
-  margin: 0 0 1rem;
-}
-
-.dl-faq div >:last-child {
-  margin: 0;
-}
-
 
 /* The acivating buttons added via JS */
 
@@ -78,7 +66,7 @@ dt > button {
 .pab-btn:focus,
 .pab-btn:active {
   color:#000;
-  background-color: rgba(0,0,0,.05);
+  background-color: rgba(0,0,0,.0125);
 }
 
 .pab-btn:focus {

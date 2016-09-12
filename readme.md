@@ -9,8 +9,10 @@
 
 * Lightweight vanilla JavaScript with zero dependencies.
 * Meets WCAG 2 level AA and uses ARIA roles.
-* Answers may be open by default using a class.
-* Answers may be open by URI fragment.
+* Answers may be expanded by default.
+* Answers may be expanded by URI fragment.
+* Answer heights are resolved via JavaScript.
+* Animations are CSS controlled.
 
 
 <br>
@@ -23,8 +25,9 @@ Link to styles
 
 A definition list <code>dl</code> is used for the FAQ.<br>
 Definition title <code>dt</code> for the question, and definition data <code>dd</code> for the answer.<br>
-Add the data attribute <code>data-pab</code> to the <code>dt</code> with the id value of the <code>dd</code> it controls.<br>
+Add the data attribute <code>data-pab</code> to the <code>dt</code> with the <code>id</code> value of the <code>dd</code> to control.<br>
 Add the data attribute <code>data-pab-expand</code> to a <code>dt</code> for it to be expanded by default.<br>
+To expand an answer via URI fragment, reference the <code>dd</code> <code>id</code>.
 
 ```html
 <dl class="dl-faq pab_container">
