@@ -6,7 +6,7 @@ kbd,code{font-size:larger}
 
 
 
-/* FAQ container */
+/* FAQ */
 
 .dl-faq {
   position: relative;
@@ -23,6 +23,7 @@ kbd,code{font-size:larger}
   border-top: 1px solid rgba(255,255,255,.2);
 }
 
+/* button added via JS */
 dt > button {
   color: inherit;
   background-color: inherit;
@@ -105,8 +106,6 @@ dt > button {
 /* SVG plus */
 
 .pab-svg-plus {
-  /* Tesco requirement
-  border: 2px solid currentColor; */
   border-radius: 100%;
   display: block;
   position: absolute;
@@ -125,14 +124,9 @@ dt > button {
 
 .pab-btn:hover .pab-svg-plus,
 .pab-btn:focus .pab-svg-plus {
-  /* Same colour as text but with .4 alpha */
-  /* Tesco requirement
-  box-shadow: 0 0 0 4px rgba(0, 83, 159, 0.4);*/
 }
 
 .pab-btn:active .pab-svg-plus {
-  /* Tesco requirement
-  box-shadow: 0 0 0 4px rgba(0, 83, 159, 0);*/
 }
 
 [aria-expanded="true"] > .pab-svg-plus {
@@ -154,7 +148,7 @@ dt > button {
 }
 
 
-/* Open / close animation - The inaccurate CSS max-height is resolved via JS adding an inline style */
+/* Open / close animation - The inaccurate CSS max-height is resolved by JS adding an inline style */
 
 [data-pab] + [aria-hidden] {
   overflow: hidden;
