@@ -1,28 +1,6 @@
-
 // https://john-dugan.com/javascript-debounce/
-// http://codepen.io/johndugan/pen/BNwBWL?editors=001
-var debounce = function(func, wait, immediate) {
+var debounce=function(e,t,n){var a;return function(){var r=this,i=arguments,o=function(){a=null,n||e.apply(r,i)},s=n&&!a;clearTimeout(a),a=setTimeout(o,t||200),s&&e.apply(r,i)}};
 
-  "use strict";
-
-  var timeout;
-  return function() {
-    var context = this;
-    var args = arguments;
-    var later = function() {
-      timeout = null;
-      if ( !immediate ) {
-        func.apply(context, args);
-      }
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait || 200);
-    if ( callNow ) {
-      func.apply(context, args);
-    }
-  };
-};
 
 
 
