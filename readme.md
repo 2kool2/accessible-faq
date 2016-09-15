@@ -1,14 +1,14 @@
 
-#FAQ using <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles to meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA
+#FAQ using WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles to meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA
 
-<strong>Demo: <a href="https://codepen.io/2kool2/pen/ZOkojB">FAQ using ARIA roles to meet WCAG 2 level AA</a></strong>
+<strong>Demo: <a href="https://codepen.io/2kool2/pen/ZOkojB">FAQ using WAI-ARIA roles to meet WCAG 2 level AA</a></strong>
 
 
 <br>
 ##Features
 
 * Lightweight vanilla JavaScript with zero dependencies.
-* Meets WCAG 2 level AA and uses ARIA roles.
+* Meets WCAG 2 level AA and uses WAI-ARIA roles.
 * Answers may be expanded by default.
 * Answers may be expanded by URI fragment.
 * Answer heights are resolved via JavaScript.
