@@ -1,11 +1,11 @@
 
-#FAQ using WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles to meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA
+<h1>FAQ using WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles to meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA</h1>
 
 <strong>Demo: <a href="https://codepen.io/2kool2/pen/ZOkojB">FAQ using WAI-ARIA roles to meet WCAG 2 level AA</a></strong>
 
 
 <br>
-##Features
+<h2>Features</h2>
 
 * Lightweight vanilla JavaScript with zero dependencies.
 * Meets WCAG 2 level AA and uses WAI-ARIA roles.
@@ -16,7 +16,7 @@
 
 
 <br>
-##Basic usage
+<h2>Basic usage</h2>
 
 Link to styles
 ```html
